@@ -6,33 +6,33 @@
  * ██   ██ ███████ ██   ██ ██████  ███████ ██   ██ *
  ******************************************************/
 header {
-    display: flex;/*mets cote à cote son contenu*/
-    justify-content: space-between;/*ecarte son contenu*/
-    height: 79px;/*force la hauteur*/
-    align-items: center;/*centre verticalement*/
-    margin-left: -20px;/**technique pour toucher les bords de l'écran**/
-    margin-right: -20px;/**technique pour toucher les bords de l'écran**/
+    display: flex;/**mets cote à cote son contenu**/
+    justify-content: space-between;/**ecarte son contenu aux extremités**/
+    height: 79px;/**force la hauteur**/
+    align-items: center;/**centre verticalement le logo**/
+    margin-left: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
+    margin-right: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
 }
 
-    img {/*LOGO BOOKI*/
-        height: 19px;/*force sa hauteur*/
+    img {/**LOGO BOOKI**/
+        height: 19px;/**force sa hauteur**/
     }
 
-    .BOITE-DES-LIENS {/*BOITE DE LIENS*/
-        display: flex;/*mets les liens cote à cote*/
-        align-self: flex-start;/*colle les liens en haut de header*/
-        gap: 68px;/*ecarte son contenu*/
+    .BOITE-DES-LIENS {/**BOITE DE LIENS**/
+        display: flex;/**mets les liens cote à cote**/
+        align-self: flex-start;/**colle les liens en haut de header**/
+        gap: 68px;/**ecarte son contenu**/
     }
 
-        .BOITE-DES-LIENS a {/*LIENS*/
-            padding-top: 14px;/*espace haut au dessus des liens*/
-            border-top: 2px solid transparent;            
+        .BOITE-DES-LIENS a {/**LIENS**/
+            padding-top: 14px;/**espace haut au dessus des liens pour que la bordure ne colle pas**/
+            border-top: 2px solid transparent;/**pour eviter le décalage au survol**/            
         }
 
-        .BOITE-DES-LIENS a:hover {/*LIENS - SURVOL*/
-            border-top: 2px solid var(--main-color);
-            color: var(--main-color);
-            padding-top: 14px;            
+        .BOITE-DES-LIENS a:hover {/**LIENS - SURVOL**/
+            border-top: 2px solid var(--main-color);/**barre bleue au dessus au survol**/
+            color: var(--main-color);/**colore au survol**/
+            padding-top: 14px;/**espace haut au dessus des liens**/            
         }
 
  /***********************************************************
@@ -49,156 +49,156 @@ main {
                                                             /*████████████████████████*/
                                                             /***RECHERCHE & FILTRES****/
                                                             /*████████████████████████*/
-    main .RECHERCHE-ET-FILTRES {/*titres de recherche & filtres*/
-        margin-top: 30px;/*marge exterieure en haut*/
+    main .RECHERCHE-ET-FILTRES {/**titres de recherche & filtres**/
+        margin-top: 30px;/**marge exterieure en haut**/
     }
-        main h1 {/*<h1>Trouvez votre hébergement ...</h1>*/
-            margin: 0;/*annule la marge par defaut des h1*/
+        main h1 {/**<h1>Trouvez votre hébergement ...</h1>**/
+            margin: 0;/**annule la marge par defaut des h1**/
         }
-        main p {/*<p>En plein centre- ...</p>*/
-            margin: 0;/*annule la marge par defaut des p*/
-            margin-top: 8px;/*impose le marge haute*/
+        main p {/**<p>En plein centre- ...</p>**/
+            margin: 0;/**annule la marge par defaut des p**/
+            margin-top: 8px;/**ajoute un petit espace sous le h1**/
         }
         
         
 
 
 /******/form {/***********FORMULAIRE***********/
-            display: flex;/*active flexbox - par defaut horizontal*/
-            height: 49px;/*impose sa hauteur - car ses enfants se "stretchent" par defaut*/
-            width: 377px;/*force la largeur*/
-            margin-top: 35px;
-            border: 1px solid var(--main-bg-color);
-            border-radius: 15px;
+            display: flex;/**active flexbox - par defaut horizontal**/
+            height: 49px;/**impose sa hauteur - car ses enfants se "stretchent" par defaut**/
+            width: 377px;/**force la largeur**/
+            margin-top: 35px;/**espace au dessus**/
+            border: 1px solid var(--main-bg-color);/**bordure grise**/
+            border-radius: 15px;/**coins arrondis**/
         }
 
-            .BOITE-ICONE {/*boite de l'icone*/
+            .BOITE-ICONE {/**boite de l'icone**/
                 width: 50px;/*impose la largeur*/
-                display: flex;/*active flexbox pour pouvoir centrer le logo*/
-                align-items: center;/*centre le logo verticalement*/
-                justify-content: center;/*centre le logo horizontalement*/
-                border-top-left-radius: 15px;
-                border-bottom-left-radius: 15px;
-                background-color: var(--main-bg-color);
+                display: flex;/**active flexbox pour pouvoir centrer le logo**/
+                align-items: center;/**centre le logo verticalement**/
+                justify-content: center;/**centre le logo horizontalement**/
+                border-top-left-radius: 15px;/**arrondi haut gauche**/
+                border-bottom-left-radius: 15px;/**arrondi bas gauche**/
+                background-color: var(--main-bg-color);/**fond gris**/
             }
 
-                .BOITE-ICONE i {/*icone*/
-                    color: black;
+                .BOITE-ICONE i {/**icone**/
+                    color: black;/**couleur noire pour l'icone**/
                 }
 
-            #ville {/*ville - case à remplir*/
-                width: 147px;/*force la largeur*/
-                padding-left: 24px;
-                border: none;
+            #ville {/**ville - champ de saisie**/
+                width: 147px;/**force la largeur**/
+                padding-left: 24px;/**decolle du bord**/
+                border: none;/**supprime la bordure par defaut**/
             }
 
-            form button {/*bouton*/
-                border-top-right-radius: 15px;/*arrondi*/
-                border-bottom-right-radius: 15px;/*arrondi*/
+            form button {/**bouton**/
+                border-top-right-radius: 15px;/**arrondi**/
+                border-bottom-right-radius: 15px;/**arrondi**/
                 background-color: var(--main-color);
                 color: var(--filter-bg-color);
-                flex: 1;/*prend la largeur qui reste dans "form"*/
-                border: none;
+                flex: 1;/**prend la largeur qui reste dans "form"**/
+                border: none;/**supprime la bordure par defaut**/
             }
-            .icone-loupe {/*REGLE POUR CACHER LA LOUPE*/
+            .icone-loupe {/**REGLE POUR CACHER LA LOUPE SUR DESKTOP**/
                 display: none;
             }
 
 
 /******/.FILTRES {/***********FILTRES***********/
-            margin-top: 30px;
-            display: flex;/*obligé d'activer flexbox*/
-            align-items: center;/*et de centrer verticalement*/
-            gap: 15px;/*pour pouvoir utiliser gap*/
-            flex-wrap: wrap;/*et obligé de laisser aller a la ligne*/
+            margin-top: 30px;/**espace au dessus**/
+            display: flex;/**obligé d'activer flexbox**/
+            align-items: center;
+            gap: 15px;/**pour pouvoir utiliser gap**/
+            flex-wrap: wrap;/**et laisser aller a la ligne**/
         }
             .FILTRES h2 {
-                margin: 0;
-                font-size: 18px;
+                margin: 0;/**supprime la marge par defaut**/
+                font-size: 18px;/**taille du titre**/
             }
 
             .FILTRES button {
-                height: 50px;
-                border: solid 2px rgba(217, 217, 217, 1);
-                border-radius: 25px;
+                height: 50px;/**hauteur des boutons**/
+                border: solid 2px rgba(217, 217, 217, 1);/**bordure grise**/
+                border-radius: 25px;/**arrondi les 4 coins**/
                 background-color: white;
-                padding: 0 19px;
+                padding: 0 19px;/**espace interne horizontal**/
             }
             .FILTRES button:hover {
-                background-color: var(--filter-bg-color);
+                background-color: var(--filter-bg-color);/**fond bleu au survol**/
             }
 
                 .FILTRES i {
-                    padding-right: 10px;
+                    padding-right: 10px;/**espace entre l'icone et le texte du bouton**/
                 }
 
         .INFOBAR {
-            display: flex;/*mets "i" et "plus de 500 ..." cote à cote*/
-            align-items: center;
-            gap: 17px;/*ecarte un peu les 2*/
+            display: flex;/**mets "i" et "plus de 500 ..." cote à cote**/
+            align-items: center;/**centre verticalement**/
+            gap: 17px;/**ecarte un peu le i et le texte**/
             margin-top: 35px;
         }
 
            .INFOBAR i {
-                border: solid rgba(217, 217, 217, 1);
-                height: 15px;
-                width: 15px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 50%;
-                font-size: 12px;
+                border: solid rgba(217, 217, 217, 1);/**bordure grise**/
+                height: 15px;/**hauteur cercle**/
+                width: 15px;/**largeur cercle**/
+                display: flex;/**pour manipuler le i**/
+                align-items: center;/**centre le i**/
+                justify-content: center;/**centre le i**/
+                border-radius: 50%;/**forme ronde**/
+                font-size: 12px;/**taille du i**/
            }
            .INFOBAR p {
-            margin: 0;
+            margin: 0;/**supprime marge par defaut**/
            }
            
                                                             /*█████████████████████████*/
                                                             /*HEBERGEMENTS & POPULAIRES*/
                                                             /*█████████████████████████*/
 
-.hebergements-and-populaires {
-    display: flex;
-    justify-content: space-between;
+.hebergements-and-populaires {/**conteneur de hebergements et populaires cote à cote**/
+    display: flex;/**aligne cote à cote**/
+    justify-content: space-between;/**sépare aux extremités**/
     margin-top: 35px;
-    gap: 40px;
+    gap: 40px;/**espace entre les blocs**/
 }
 
 /************************************HEBERGEMENTS**************************************/
-.hebergements {/*occupe 65% de la largeur de son parent*/
-    width: 65%;
+.hebergements {
+    width: 65%;/**occupe 65% de la largeur de son parent**/
 }
 
     .hebergements-title {        
-    }
+    }/**conteneur du titre, pas de style nécessaire**/
         .section-title {
-            margin: 0;/*Obligé de bloquer la marge car "feuille de style user-agent" ????*/
+            margin: 0;/**Obligé de bloquer la marge car "feuille de style user-agent" ????**/
         }
 
 
 
-    .hebergements-cards {/*ENSEMBLE DE CARTES*/
-        display: flex;/*aligne horizontalement*/
-        flex-wrap: wrap;/* autorise le retour à la ligne */
-        gap: 30px;/*ecartement entre les lignes et les colonnes*/
+    .hebergements-cards {/**ENSEMBLE DES 6 CARTES**/
+        display: flex;/**aligne horizontalement**/
+        flex-wrap: wrap;/**autorise le retour à la ligne**/
+        gap: 30px;/**ecartement entre les lignes et les colonnes**/
         padding-top: 30px;
     }
 
-        .hebergements-cards a {/*LIENS*/
-            flex: 1 1 30%;
+        .hebergements-cards a {/**LIENS**/
+            flex: 1 1 30%;/**flexible : prend 30% de largeur, peut grandir/rétrécir**/
         }
-            .hebergements-cards .card {/*CARTE (contenu : image, titre, prix et etoiles)*/
-                display: flex;
-                flex-direction: column;
+            .hebergements-cards .card {/**CARTE (contenu : image, titre, prix et etoiles)**/
+                display: flex;/**empile le contenu des cartes**/
+                flex-direction: column;/**verticalement**/
             }
                 .hebergements-cards img {
-                    width: 100%;/*l'image prends la taille de son contenant*/
-                    height: 125px;/*j'impose la hauteur*/
+                    width: 100%;/**l'image prends la taille de son contenant**/
+                    height: 125px;/**j'impose la hauteur**/
                     border-top-left-radius: 16px;
                     border-top-right-radius: 16px;
                 }
 
-                .hebergements-cards .card-content {/*étiquette*/                 
+                .hebergements-cards .card-content {/**étiquette**/                 
                 }
                     .hebergements-cards .card-txt {
                     }
@@ -208,21 +208,21 @@ main {
                         }
 
                         .hebergements-cards .card-subtitle {
-                            margin: 0;
-                            font-size: 14px;/*impose la taille du texte*/
+                            margin: 0;/**supprime marge par defaut**/
+                            font-size: 14px;/**impose la taille du texte**/
                         }
                     .hebergements-cards .card-rating {                        
                     }
                         .hebergements-cards i {                            
                         }
         .afficher-plus {
-            margin: 0;
+            margin: 0;/**supprime marge par defaut**/
             padding-top: 30px;
         }
 
 /*************************************POPULAIRES***************************************/
 .populaires {
-    width: 32%;
+    width: 32%;/**prend 32% de la largeur du parent**/
 }
     .populaires-title {
         display: flex;
@@ -230,7 +230,7 @@ main {
         align-items: center;
     }
         .section-title {
-            margin: 0;/*Obligé de bloquer la marge car "feuille de style user-agent" ????*/
+            margin: 0;/**supprime la marge**/
         }
 
     .populaires-cards {
@@ -283,24 +283,24 @@ main {
     }
 
     .activites-cards {
-        display: flex;/*mets les cartes cote à cote*/
-        padding-top: 30px;
-        gap: 20px;
+        display: flex;/**mets les cartes cote à cote**/
+        padding-top: 30px;/**espace au dessus**/
+        gap: 20px;/**espace entre les cartes**/
     }
         .activites a {
-            flex: 1;/*pour que chaque lien de carte prenne exactement un quart de l'espace disponible*/
-                    /* Comme il y a 4 <a>, chacun prend 1/4*/
-                    /*flex: 1 ne fonctionne que sur les enfants directs d'un conteneur qui a display: flex*/
+            flex: 1;/**pour que chaque lien de carte prenne exactement un quart de l'espace disponible**/
+                    /**Comme il y a 4 <a>, chacun prend 1/4**/
+                    /**flex: 1 ne fonctionne que sur les enfants directs d'un conteneur qui a display: flex**/
         }
             .activites article {
-                padding: 0;
-                height: 100%;/* prend la hauteur du parent */
-                box-sizing: border-box; /* Le padding est inclus dans la largeur totale */
+                padding: 0;/**supprime padding par defaut de .card**/
+                height: 100%;/**prend la hauteur du parent**/
+                box-sizing: border-box; /**le padding est inclus dans la largeur totale**/
             }
-                .activites img {/* image */
-                    height: 380px;   /* impose la hauteur de l'image */
-                    width: 100%;     /* l'image prend toute la largeur de sa carte */
-                    object-fit: cover; /* elle remplit l'espace sans se déformer */
+                .activites img {/**image**/
+                    height: 380px;/**impose la hauteur de l'image**/
+                    width: 100%;/**l'image prend toute la largeur de sa carte**/
+                    object-fit: cover;/**elle remplit l'espace sans se déformer**/
                     border-top-left-radius: 25px;
                     border-top-right-radius: 25px;
                 }
@@ -310,18 +310,6 @@ main {
                     .activites h3 {
                         font-size: 16px;
                     }
-
-
-
-
-
-
-
-
-
-
-
-
  /***************************************************************************
  * ███████  ██████   ██████  ████████ ███████ ██████  *
  * ██      ██    ██ ██    ██    ██    ██      ██   ██ *
@@ -331,44 +319,27 @@ main {
  ***************************************************************************/
 footer {
     background-color: var(--main-bg-color);
-    display: flex;
+    display: flex;/**aligne cote à cote**/
     justify-content: flex-start;
     padding: 30px;
     margin-top: 35px;
 }
     footer div {
-        flex: 1;/* Chaque colonne prend 33% de la largeur du footer */
+        flex: 1;/**chaque colonne prend 33% de la largeur du footer**/
         margin-left: 30px;
     }
         footer ul {
-            padding: 0;/*annule le padding par defaut*/
-            margin: 0;/*annule la marge par defaut*/
-            list-style-type: none;/*enlève les points par defaut*/
+            padding: 0;/**annule le padding par defaut des listes**/
+            margin: 0;/**annule la marge par defaut**/
+            list-style-type: none;/**enlève les points par defaut**/
         }
             footer li {
                 margin-top: 10px;
             }
-            footer li:first-child {
+            footer li:first-child {/**cible le titre de la colonne**/
                 margin-top: 0;
                 margin-bottom: 20px;
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /************************************************BASE DE CODE OPENCLASSROOMS******************************/
 /******************************Toutes les lignes passées en commentaires ont été copiées plus haut********/
 /****** General ***********/
@@ -535,8 +506,8 @@ a {
     /********************************************************************************************/
     /****** Media queries tablette ********************************MES MODIFS*****************************/
     /********************************************************************************************/
-    .activites article {/*je fixe la hauteur de l'article pour que TOUTES les cartes soient égales */
-        height: 270px;/* 200px d'image + 70px pour la zone de titre */
+    .activites article {/**je fixe la hauteur de l'article pour que TOUTES les cartes soient égales**/
+        height: 270px;/**200px d'image + 70px pour la zone de titre**/
         display: flex;
         flex-direction: column;
     }
@@ -600,7 +571,7 @@ a {
                 }
                     form {
                         width: 100%;/**prend la largeur totale**/
-                        max-width: 377px;/**sauf pour les ecrans de petites largeurs **/
+                        max-width: 377px;/**sauf pour les ecrans de petites largeurs**/
                     }
                         form input {
                             flex: 1;/**c'est maintenant lui qui s'étire pour remplir la ligne**/
@@ -609,13 +580,13 @@ a {
                             flex: none;/**reprend sa valeur par defaut**/
                             width: 49px;/**même largeur que la hauteur du formulaire**/
                             border-radius: 15px;
-                            display: flex;/**pour centrer la loupe**/
+                            display: flex;/**pour manipuler la loupe**/
                             align-items: center;/**pour centrer la loupe**/
                             justify-content: center;/**pour centrer la loupe**/
-                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+                            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);/**ombre**/
                         }
                             form strong {
-                                display: none;/**empeche l'affichage de "rechercher"**/
+                                display: none;/**empeche l'affichage de "rechercher" sur petite largeur d'écran**/
                             }
                             .icone-loupe {
                                 display: block;/**AFFICHE LA LOUPE CACHEE**/
@@ -668,7 +639,7 @@ a {
                         flex-direction: column;
                     }
             footer {/**==============================================FOOTER==================================================**/
-                flex-direction: column;
+                flex-direction: column;/**empile les 3 colonnes**/
                 padding-top: 0;
             }
                 footer div {
