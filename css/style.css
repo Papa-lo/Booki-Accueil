@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 /******************************************************
  * ██   ██ ███████  █████  ██████  ███████ ██████  *
  * ██   ██ ██      ██   ██ ██   ██ ██      ██   ██ *
@@ -10,8 +13,6 @@ header {
     justify-content: space-between;/**ecarte son contenu aux extremités**/
     height: 79px;/**force la hauteur**/
     align-items: center;/**centre verticalement le logo**/
-    margin-left: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
-    margin-right: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
 }
 
     img {/**LOGO BOOKI**/
@@ -545,6 +546,8 @@ a {
             header {/**================================================HEADER================================================**/
                 flex-direction: column;
                 height: auto;/**ecrase les 79px impposés pour s'adapter au contenu**/
+                margin-left: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
+                margin-right: -20px;/**technique pour toucher les bords de l'écran malgré le padding du parent**/
             }
                 header img {
                     padding: 30px 0;
