@@ -179,21 +179,17 @@ main {
 
     .hebergements-cards {/*ENSEMBLE DE CARTES*/
         display: flex;/*aligne horizontalement*/
-        justify-content: space-between;/*adapte les cartes au bloc gris -
-        - sans lui les cartes ne suivent pas l'étirement du bloc gris*/
         flex-wrap: wrap;/* autorise le retour à la ligne */
-        gap: 20px;/*ecartement entre les lignes*/
+        gap: 30px;/*ecartement entre les lignes et les colonnes*/
         padding-top: 30px;
     }
 
         .hebergements-cards a {/*LIENS*/
-            width: calc((100% - 40px) / 3); /* 3 cartes par ligne */
+            flex: 1 1 30%;
         }
             .hebergements-cards .card {/*CARTE (contenu : image, titre, prix et etoiles)*/
                 display: flex;
                 flex-direction: column;
-                height: 100%;
-
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);                    
             }
                 .hebergements-cards img {
@@ -220,7 +216,7 @@ main {
                     }
                         .hebergements-cards i {                            
                         }
-        .hebergements h3 {
+        .afficher-plus {
             margin: 0;
             padding-top: 30px;
         }
@@ -645,7 +641,8 @@ a {
                     }
                             .hebergements-cards a {
                                 flex-direction: column;
-                                width: 100%;
+                                width: 100%;/**force la carte à prendre TOUTE la largeur**/
+                                flex: none;/**annule le "flex: 1 1 30%" du desktop**/
                             }
                     .hebergements-and-populaires .populaires {/**je force Populaires à s'afficher au-dessus**/
                     /**je cible ".hebergements-and-populaires .populaires" une classe a plus de poids qu'une balise**/
