@@ -11,5 +11,6 @@ Maquette Figma
 L'intégration a été réalisée à partir de la maquette Figma fournie par OpenClassrooms.
 
 Tester le projet
+Lien vers mon depôt GitHub : https://papa-lo.github.io/Booki-Accueil/
 Clonez le dépôt ou téléchargez les fichiers.
 Ouvrez le fichier index.html dans votre navigateur préféré.
